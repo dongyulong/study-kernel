@@ -1,0 +1,7 @@
+1.摘自README,使用gdb
+After you've rebooted with the new kernel, do "gdb vmlinux /proc/kcore".
+you can now use all the usual gdb commands. The command to look up the
+point where your system crashed is "l *0xXXXXXXXX". (Replace the XXXes with the EIP value.)
+
+2.使用vmlinux查找对应函数
+nm vmlinux | sort | less
